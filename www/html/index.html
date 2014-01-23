@@ -11,41 +11,55 @@
 	 
 	<body>
 		
-	<div class="container">
+	<div class="wrapper">
 
-		<header class="row">
+		<header class="top-nav">
 
-			<div class="columns twelve">
-				<h1 class="logo">
-					<a href="#">logo</a>
-				</h1>
-				<nav role="primary">
+				<a class="logo" href="#">
+					<!-- <h1 class="logo">OIYSC logo</h1> -->
+					<img src="../img/OIYSC-logo.jpg" alt="OIYSC logo">
+				</a>
+				<nav class="main-menu" role="primary">
 					<ul>
-						<li><a href="#">item01</a></li>
-						<li><a href="#">item02</a></li>
-						<li><a href="#">item03</a></li>
-						<li><a href="#">item04</a></li>
+						<li class="projects"><a href="#">How we serve</a>
+							<ul class="submenu">
+								<li><a href="">international</a></li>
+								<li><a href="">community</a></li>
+							</ul>
+						</li>
+						<li class="calendar"><a href="#">Calendar</a>
+							<ul class="submenu">
+								<li><a href="">Events</a></li>
+								<li><a href="">Meetings</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Shop/Donate</a></li>
+					</ul>
+					<ul class="info-nav" >
+						<li class="info-menu"><a href="#">About Us/FAQ</a></li>
+						<li class="info-menu"><a href="#">Contact</a></li>
 					</ul>
 				</nav>
-			</div>
 
-			<div class="columns twelve carousel">
-				<img src="../img/villageAfrique.jpg" alt="">
-				
-			</div>
 		</header> <!-- row -->
 
-		<div class="row">
+			<div class="carousel">
+				<img src="../img/villageAfrique.jpg" alt="">
+			</div>
+
+		<div class="page-content">
+
 			
-			<div class="columns three">
+			<div class="left-sidebar">
+				<img src="../img/circle-pencils.png" alt="">
 				<h3>Left sidebar</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, maxime, perspiciatis, enim cumque veritatis consequatur numquam aliquam voluptates qui corporis dicta alias ullam maiores mollitia placeat perferendis quae at rerum.</p>
 			</div>
-			<div class="columns six">
+			<div class="middle">
 				<h3>Title of an article</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, maxime, perspiciatis, enim cumque veritatis consequatur numquam aliquam voluptates qui corporis dicta alias ullam maiores mollitia placeat perferendis quae at rerum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, suscipit et provident maxime cupiditate consectetur eligendi impedit a cum eius. Atque perferendis possimus placeat tenetur corrupti nisi quisquam debitis dolore!</p>
 			</div>
-			<div class="columns three">
+			<div class="right-sidebar">
 				<h3>right sidebar</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, maxime, perspiciatis, enim cumque veritatis consequatur numquam aliquam voluptates qui corporis dicta alias ullam maiores mollitia placeat perferendis quae at rerum.</p>
 			</div>
@@ -53,7 +67,7 @@
 		</div> <!-- row -->
 
 
-		<footer class="row">
+		<footer>
 		
 			<p>footer</p>
 

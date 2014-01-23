@@ -1,4 +1,134 @@
-﻿img {
+﻿// =========== background ==============
+	html {
+		background: url(../img/fabric_1.png);
+		color: @black;
+	}
+	body {
+		background-color: fade(@yellow, 10%);
+	}
+// -------- /end background ------------
+
+
+// all body elements are in div.wrapper 
+.wrapper {
+	.container;
+}
+
+
+// ============ header (logo and nav) ========
+	header.top-nav {
+		.row;
+
+		a.logo { 
+			.col(2);
+			text-align: center;
+			// background: url(../img/OIYSC-logo.jpg);
+			h1 {
+				border: 0;
+				font: 0/0 a;
+				text-shadow: none;
+				color: transparent;
+				// background: url(../img/OIYSC-logo.jpg) no-repeat center center;
+				// background-size: percentage(1258px / 150px) Auto;
+				// width: 150px;
+				// height: ((150px * 1031px) / 1258px);
+			}
+			img {
+				width: 30%;
+					@media screen and (min-width: 800px) {
+						width: 100%;
+					}
+			}
+		}
+
+		nav.main-menu {
+			.col(10);
+			margin-top: 30px;
+			ul { 
+				.col(9);
+				// width: 80%;
+				&.info-nav {
+					.col(3);
+					// width: 20%;
+				}
+				li { 
+					display: inline-block;
+					margin-left: 30px;
+					position: relative;
+					&.projects:hover {
+						ul.submenu { 
+							display: block;
+						}
+					}
+					&.calendar:hover {
+						ul.submenu { 
+							display: block;
+						}
+					}
+					&.info-menu {
+						float: right;
+							a {
+								font-size: 1em;
+								color: green;
+								@media screen and (min-width: 800px) {
+									font-size: 1.25em;
+								}
+							}
+					}
+					a {
+						text-decoration: none;
+						font-family: cursive;
+						font-size: 1.25em;
+						color: @black;
+						@media screen and (min-width: 800px) {
+							font-size: 1.5em;
+						}
+					}
+					ul.submenu {
+						display: none;
+						position: absolute;
+						a {	
+							color: @gray;
+						}
+					}
+				}
+
+			}
+		}
+	}
+// ---------- /end header (logo and nav) -----------
+
+
+div.page-content {
+	.row;
+	margin-top: 20px;
+
+	div.left-sidebar {
+		.col(3);
+		img {
+			width: 50%;
+			@media screen and (min-width: 800px) {
+				width: 100%;
+			}
+		}
+
+	}
+
+	div.middle {
+		.col(6);
+		h3 {
+			font-size: 5em;
+		}
+	}
+
+	div.right-sidebar {
+		.col(3);
+	}
+
+}
+
+
+img {
 	width: 100%;
 	height: auto;
 }
