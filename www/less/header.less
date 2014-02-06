@@ -1,0 +1,320 @@
+﻿// ============ header (logo and nav) ========
+	header.top-nav { 
+		.row;
+		font-family: blokletters_balpen;
+		a { 
+			text-decoration: none; 
+			display: inline-block;
+			width: 100%;
+		} 
+		ul { 
+			list-style-type: none;	
+			width: 100%;
+		}
+
+		// menu shadow for mobile screens only
+		@media screen and (max-width: 768px) {
+			.box-shadow();
+			margin-bottom: 20px;
+		}
+
+		// space above header only in larger screens
+		@media screen and (min-width: 768px) {
+			margin-top: 20px;
+		}
+
+		// hide menu items on small screens only
+		#collapse {
+			display: none;
+			@media screen and (min-width: 768px) {
+				display: block;
+			}
+		}
+
+		.collapse-menu {
+			height: 50px;
+			background-color: @drkbrown;
+			font-size: 2em;
+			text-align: center;
+			@media screen and (min-width: 768px) {
+				display: none;
+			}
+			.collapse-logo {
+				width: 40px;
+				margin-top: 3px;
+				margin-left: 10px;
+				position: absolute;
+				left: 0;
+			}
+			.menu-icon {
+				width: 100%;
+				color: lighten(@drkbrown, 30%);
+				&:hover {
+					color: lighten(@drkbrown, 50%);
+				}
+			}
+		}
+
+		// =============== logo ==================
+		a.logo { 
+			.col(2);
+			display: none;
+			padding: 0;
+
+			@media screen and (min-width: 768px) {
+				display: inline-block;
+				width: 100px; // keep width of logo
+			}
+			@media screen and (min-width: 992px) {
+				width: 125px
+			}
+			@media screen and (min-width: 1200px) {
+				width: 150px
+			}
+
+			img {
+				width: 50px;
+				@media screen and (min-width: 768px) {
+					width: 100%;
+				}
+			}
+		}
+
+		// =============== top menu ==================
+		nav.top-menu {
+			.col(2);
+			font-size: .7em;
+			line-height: 2.4em;
+			text-align: center;
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: 0;
+
+			@media screen and (min-width: 768px) {
+				font-size: .75em;
+				float: right;
+				text-align: right;
+				display: inline-block;
+			}
+			@media screen and (min-width: 992px) {
+				font-size: .8em;
+				line-height: 2.6em;
+			}
+			@media screen and (min-width: 1200px) {
+				font-size: .85em;
+				line-height: 3em;
+			}
+
+
+			a {
+				&.about {
+					display: none;
+					@media screen and (min-width: 768px) {
+						display: inline-block;
+					}
+				}
+				&.about-sm {
+					@media screen and (min-width: 768px) {
+						display: none;
+					}
+				}
+
+				width: 33%;
+				padding: 10px 0;
+				color: lighten(@drkbrown, 40%);
+				background-color: fade(@drkbrown, 10%);
+				@media screen and (min-width: 768px) {
+					background-color: transparent;
+					width: 100%;
+					padding: 0;
+				}
+				&:hover {
+					background-color: transparent;
+					color: @drkbrown;
+					@media screen and (min-width: 768px) {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+		// ----------------- end top menu --------------- 
+
+		// =============== main menu ==================
+		nav.main-menu {
+			text-align: center;
+			.col(8);
+			padding: 0;
+			margin: 0;
+			@media screen and (min-width: 768px) {
+				float: right;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: .8em;
+				padding: 10px 0;
+				line-height: 2em;
+				color: tint(@drkbrown, 40%);
+				text-transform: uppercase;
+				&:hover {
+					color: tint(@drkbrown, 0%);
+				}
+
+				@media screen and (min-width: 768px) {
+					
+					font-size: 1em;
+					display: inline-block;
+					padding-top: 25px;
+					text-align: center;			
+				}
+				@media (min-width: 992px) { 
+					font-size: 1.25em;
+					padding-top: 30px;
+				}
+				@media (min-width: 1200px) { 
+					font-size: 1.35em;
+					padding-top: 38px;
+				}
+			}
+
+			// seperate menu items, dropdown and submenu settings
+			.news {
+				background-color: fade(@blue, 30%);
+				&:hover {
+					background-color: fade(@blue, 40%);
+				}
+				@media screen and (min-width: 768px) {
+					background-color: transparent;
+					width: 15%;
+					&:hover {
+						background-color: transparent;
+						border-bottom: 3px solid fade(@blue, 50%);
+					}
+				}
+			}
+			.dropdown-menu {
+				position: relative;
+
+				// projects menu
+				&.projects {
+					.projects-link {
+						background-color: fade(@aqua, 30%);
+						&:hover {
+							background-color: fade(@aqua, 40%);
+						}						
+					}
+					.submenu a {
+						background-color: fade(@aqua, 20%);
+						&:hover {
+							background-color: fade(@aqua, 40%);
+						}						
+					}
+					@media screen and (min-width: 768px) {
+						display: inline-block;
+						width: 35%;
+						.projects-link {
+							background-color: transparent;
+							&:hover {
+								background-color: transparent;
+							}						
+						}
+						.submenu a {
+							background-color: fade(tint(@aqua, 70%), 50%);
+							&:hover {
+								background-color: fade(@aqua, 20%);
+							}						
+						}
+					}
+				}
+
+				// calendar menu
+				&.calendar {
+					.calendar-link {
+						background-color: fade(@green, 30%);
+						&:hover {
+							background-color: fade(@green, 40%);
+						}					
+					}
+					.submenu a {
+						background-color: fade(@green, 20%);
+						&:hover {
+							background-color: fade(@green, 40%);
+						}						
+					}
+					@media screen and (min-width: 768px) {
+						display: inline-block;
+						width: 25%;
+						.calendar-link {
+							background-color: transparent;
+							&:hover {
+								background-color: transparent;
+							}						
+						}
+						.submenu a {
+							background-color: fade(tint(@green, 70%), 50%);
+							&:hover {
+								background-color: fade(@green, 20%);
+							}						
+						}
+					}
+				}
+
+				@media screen and (min-width: 768px) {
+
+					&:hover .projects-link {
+						background-color: transparent;
+						border-bottom: 3px solid fade(@aqua, 30%);
+					}				
+					&:hover .calendar-link {
+						background-color: transparent;
+						border-bottom: 3px solid fade(@green, 50%);
+					}
+
+					// .submenu visible on hover
+					&:hover .submenu {
+						display: block;
+						background-color: fade(@white, 50%);
+						position: absolute;
+					}
+				}
+				.submenu {
+					width: 100%;
+					a{
+						color: tint(@drkbrown, 50%);
+						font-size: .7em;
+						line-height: 2em;
+						
+						@media screen and (min-width: 768px) {
+							font-size: .9em;
+							line-height: 1em;
+							padding: 25px;
+						}
+
+						&:hover {
+						color: tint(@drkbrown, 0%);
+						}
+					}
+
+					// hide submenu on larger screens
+					@media screen and (min-width: 768px) {
+						display: none;
+					}
+				}
+			}
+			.shop {
+				background-color: fade(@red, 20%);
+				&:hover {
+					background-color: fade(@red, 30%);
+				}
+				@media screen and (min-width: 768px) {
+					width: 15%;
+					background-color: transparent;
+					&:hover {
+						background-color: transparent;
+						border-bottom: 3px solid fade(@red, 30%);
+					}
+				}
+			}
+		}
+	}
+// ---------- /end header (logo and nav) -----------

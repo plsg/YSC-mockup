@@ -6,4 +6,40 @@
 	@gray: 		#6f6f6f;
 	@white: 	#eee;
 	@yellow: 	#f3bf4e;
+
+	@purple: 	#7d6fac;
+	@blue: 		#405baa;
+	@green: 	#68c375;
+	@red: 		#da3427;
+	@aqua: 		#61b4bb;
+	@drkbrown: 	#3B3530;
+
+
 // ------ /end colors --------
+
+// mixin for rounded corner effects
+.round-corners (@radius) {
+	border-radius:         @radius;
+}
+
+.round-sides (@horiz; @vertic) {
+	border-radius: 		@horiz/@vertic;
+}
+
+.inner-shadow (@x: 0, @y: 0, @blur: 100px, @alpha: .5) {
+	-webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+
+.box-shadow (@string: 0 10px 20px -10px rgba(0, 0, 0, 0.5)) {
+// box-shadow: [horizontal] [vertical] [blur] [optional spread] [color];
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
