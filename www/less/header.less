@@ -20,7 +20,7 @@
 
 		// space above header only in larger screens
 		@media screen and (min-width: 768px) {
-			margin-top: 20px;
+			margin-top: 0;
 		}
 
 		// hide menu items on small screens only
@@ -60,22 +60,24 @@
 			.col(2);
 			display: none;
 			padding: 0;
+			margin-bottom: 10px;
 
 			@media screen and (min-width: 768px) {
 				display: inline-block;
 				width: 100px; // keep width of logo
+				padding-top: 15px;
 			}
 			@media screen and (min-width: 992px) {
-				width: 125px
+				width: 125px;
 			}
 			@media screen and (min-width: 1200px) {
-				width: 150px
+				width: 150px;
 			}
 
 			img {
 				width: 50px;
 				@media screen and (min-width: 768px) {
-					width: 100%;
+					width: 65%;
 				}
 			}
 		}
@@ -84,11 +86,13 @@
 		nav.top-menu {
 			.col(2);
 			font-size: .7em;
-			line-height: 2.4em;
+			line-height: 1.6em;
 			text-align: center;
 			padding-left: 0;
 			padding-right: 0;
 			margin-bottom: 0;
+			margin-top: 10px;
+
 
 			@media screen and (min-width: 768px) {
 				font-size: .75em;
@@ -98,11 +102,11 @@
 			}
 			@media screen and (min-width: 992px) {
 				font-size: .8em;
-				line-height: 2.6em;
+				line-height: 1.8em;
 			}
 			@media screen and (min-width: 1200px) {
 				font-size: .85em;
-				line-height: 3em;
+				line-height: 2em;
 			}
 
 
@@ -194,6 +198,7 @@
 			}
 			.dropdown-menu {
 				position: relative;
+				z-index: 1000;
 
 				// projects menu
 				&.projects {
